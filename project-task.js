@@ -32,7 +32,7 @@ This activity reinforces:
 // ❌ Original Code (Before Refactoring)
 // ============================================
 
-// Script 1 - Greeting multiple users
+/*// Script 1 - Greeting multiple users
 console.log("Welcome, Alice!");
 console.log("Welcome, Bob!");
 console.log("Welcome, Charlie!");
@@ -51,7 +51,7 @@ let names = ["Alice", "Bob", "Charlie"];
 console.log("Names in the list:");
 for (let i = 0; i < names.length; i++) {
     console.log(names[i]);
-}
+}*/
 
 /*
 ===========================================
@@ -72,3 +72,53 @@ for (let i = 0; i < names.length; i++) {
 */
 
 // ✅ Your refactored code goes below this line!
+
+// Script 1 - Greeting multiple users
+
+let names = ["Alice", "Bob", "Charlie"];
+
+function greetUsers(userName){
+   console.log(`Welcome ${userName}`); //Greets userName
+}
+
+for (let nameArray of names){
+   greetUsers(nameArray); //Greets Users dynamically with the growth of the arrays
+}
+
+// Script 2 - Sum calculation
+let num1 = 5, num2 = 10;
+
+function sumCalculation(num1, num2){
+   let sum = num1 + num2; 
+   return sum;
+}
+
+function printSum(num1, num2){
+   console.log(`The sum of ${num1} and ${num2} is ` + sumCalculation(num1, num2)); // function only prints& can be resused for later opeartion printing
+}
+
+printSum(num1, num2);
+
+
+//Script 3 - Product calculation
+
+function productCalculation(num1,num2){
+   let product = num1 * num2;
+   return product;
+}
+
+function printProduct(num1,num2){
+   console.log(`The product of ${num1} and ${num2} is ` + productCalculation(num1, num2));
+}
+
+printProduct(num1,num2);
+
+// Script 4 - Print names from a list
+function printNameList(names){
+   console.log("Names in the list:");
+   for (let i = 0; i < names.length; i++) {
+    console.log(names[i]);
+   }
+}
+
+printNameList(names);
